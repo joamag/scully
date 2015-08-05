@@ -1,8 +1,8 @@
 /*
  * main.c -- the bare scull char module
  *
- * Copyright (C) 2001 Alessandro Rubini and Jonathan Corbet
- * Copyright (C) 2001 O'Reilly & Associates
+ * Copyright (c) 2001 Alessandro Rubini and Jonathan Corbet
+ * Copyright (c) 2001 O'Reilly & Associates
  *
  * The source code in this file can be freely used, adapted,
  * and redistributed in source or binary form, so long as an
