@@ -80,25 +80,25 @@
  * Representation of scull quantum sets.
  */
 struct scull_qset {
-	void **data;
-	struct scull_qset *next;
+    void **data;
+    struct scull_qset *next;
 };
 
 struct scull_dev {
-	struct scull_qset *data;  /* Pointer to first quantum set */
-	int quantum;              /* the current quantum size */
-	int qset;                 /* the current array size */
-	unsigned long size;       /* amount of data stored here */
-	unsigned int access_key;  /* used by sculluid and scullpriv */
-	struct semaphore sem;     /* mutual exclusion semaphore     */
-	struct cdev cdev;	  /* Char device structure		*/
+    struct scull_qset *data;  /* Pointer to first quantum set */
+    int quantum;              /* the current quantum size */
+    int qset;                 /* the current array size */
+    unsigned long size;       /* amount of data stored here */
+    unsigned int access_key;  /* used by sculluid and scullpriv */
+    struct semaphore sem;     /* mutual exclusion semaphore     */
+    struct cdev cdev;      /* Char device structure        */
 };
 
 /*
  * Split minors in two parts
  */
-#define TYPE(minor)	(((minor) >> 4) & 0xf)	/* high nibble */
-#define NUM(minor)	((minor) & 0xf)		/* low  nibble */
+#define TYPE(minor)    (((minor) >> 4) & 0xf)    /* high nibble */
+#define NUM(minor)    ((minor) & 0xf)        /* low  nibble */
 
 
 /*
@@ -109,7 +109,7 @@ extern int scull_nr_devs;
 extern int scull_quantum;
 extern int scull_qset;
 
-extern int scull_p_buffer;	/* pipe.c */
+extern int scull_p_buffer;    /* pipe.c */
 
 
 /*
